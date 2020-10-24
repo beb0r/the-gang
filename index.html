@@ -31,7 +31,7 @@
       <h5>The Gang</h5>
       <ul>
         <li>
-          <a href="#">Sign Up</a>
+          <a href="javascript:()" onclick="showPopup();">Sign Up</a>
         </li>
         <li><a href="#story">The Story</a></li>
         <li><a href="#more-info">More Info</a></li>
@@ -45,7 +45,7 @@
           to join us then join our fan club. Members will also receive pictures
           of us in all kind of shapes and sizes. Cool huh?
         </p>
-        <button class="cta">Sign Me Up!</button>
+        <button class="cta" onclick="showPopup();">Sign Me Up!</button>
       </div>
     </div>
     <div class="sep"></div>
@@ -98,31 +98,37 @@
         Made by Vera from <a href="https://verapinselt.de">Verapinselt</a>
       </div>
     </footer>
-    <div class="popup">
+    <div class="popup" id="popup">
       <div class="blanket"></div>
       <div class="content">
         <h2>Fill In Your Details</h2>
         <form action="">
-          <div class="item">
-            <label>Your First Name</label>
-            <input type="text" placeholder="Awesomeface" value="Shirley" />
+          <div class="row">
+            <div class="item">
+              <label>Your First Name</label>
+              <input type="text" placeholder="Awesomeface" value="Shirley" />
+            </div>
+            <div class="item">
+              <label>Your Last Name</label>
+              <input type="text" placeholder="Circleface" />
+            </div>
           </div>
-          <div class="item">
-            <label>Your Last Name</label>
-            <input type="text" placeholder="Circleface" />
-          </div>
-          <div class="item">
-            <label>Your Favourite Color</label>
-            <input type="text" placeholder="Pink" />
-          </div>
-          <div class="item">
-            <label>Your Favourite Food</label>
-            <input type="text" placeholder="Apple Pie" />
+          <div class="row">
+            <div class="item">
+              <label>Your Favourite Color</label>
+              <input type="text" placeholder="Pink" />
+            </div>
+            <div class="item">
+              <label>Your Favourite Food</label>
+              <input type="text" placeholder="Apple Pie" />
+            </div>
           </div>
           <button class="cta">I Want In!</button>
         </form>
-        <button class="close">close</button>
+        <button class="close" onclick="hidePopup();">close</button>
       </div>
     </div>
+
+    <script src="script.js" type="text/javascript"></script>
   </body>
 </html>
